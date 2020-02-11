@@ -46,24 +46,28 @@ namespace Photo_Order
             }
             
             string size = cbxSize.SelectedItem.ToString();
-            double price;
+            double price = 0;
             quantity = 0;//assigns value zero to quantity variable
             double totalPrice = 0;
-            totalPrice = totalPrice + (price * quantity);//calculate price by multiple price with quantity
+            totalPrice = 0;
             
             switch(size)
             {
                 case "Small":
                     price = 0.20;
+                    totalPrice = quantity * price;
                     break;              
                 case "Medium":
                     price = 0.30;
+                    totalPrice = quantity * price;
                     break;            
                 case "Large":
                     price = 0.40;
+                    totalPrice = quantity * price;
                     break;
                 case "Extra Large":
                     price = 0.50;
+                    totalPrice = quantity * price;
                     break;
                 default:
                     MessageBox.Show("Unknown size");
