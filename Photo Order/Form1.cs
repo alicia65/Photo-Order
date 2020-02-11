@@ -34,7 +34,7 @@ namespace Photo_Order
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            if (Int32.TryParse(txtQuantity.Text, out int quantity) == false)
+            if (Int32.TryParse(numUpDown.Text, out int quantity) == false)
             {
                 MessageBox.Show("Quantity must be a number", "Error");
                 return;
@@ -70,6 +70,11 @@ namespace Photo_Order
         }
 
         private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numUpDown_ValueChanged(object sender, EventArgs e)
         {
 
         }

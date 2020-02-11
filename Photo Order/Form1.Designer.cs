@@ -34,7 +34,8 @@
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.cbxSize = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.numUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCalculate
@@ -91,20 +92,20 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Quantity";
             // 
-            // txtQuantity
+            // numUpDown
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(247, 91);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(100, 24);
-            this.txtQuantity.TabIndex = 7;
-            this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
+            this.numUpDown.Location = new System.Drawing.Point(247, 91);
+            this.numUpDown.Name = "numUpDown";
+            this.numUpDown.Size = new System.Drawing.Size(120, 24);
+            this.numUpDown.TabIndex = 8;
+            this.numUpDown.ValueChanged += new System.EventHandler(this.numUpDown_ValueChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 265);
-            this.Controls.Add(this.txtQuantity);
+            this.Controls.Add(this.numUpDown);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbxSize);
             this.Controls.Add(this.txtPrice);
@@ -116,6 +117,7 @@
             this.Name = "Form1";
             this.Text = "Photo Order";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +131,7 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.ComboBox cbxSize;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.NumericUpDown numUpDown;
     }
 }
 
