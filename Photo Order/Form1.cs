@@ -47,12 +47,10 @@ namespace Photo_Order
             
             string size = cbxSize.SelectedItem.ToString();
             double price;
-            quantity = 0;
+            quantity = 0;//assigns value zero to quantity variable
             double totalPrice = 0;
-
             totalPrice = totalPrice + (price * quantity);//calculate price by multiple price with quantity
             
-
             switch(size)
             {
                 case "Small":
