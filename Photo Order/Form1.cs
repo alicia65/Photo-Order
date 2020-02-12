@@ -47,11 +47,9 @@ namespace Photo_Order
             
             string size = cbxSize.SelectedItem.ToString();
             double price = 0;
-            quantity = 0;//assigns value zero to quantity variable
-            double totalPrice = 0;
-            totalPrice = 0;
+            double totalPrice = 0;          
             
-            switch(size)
+            switch(size)// switch state has size for condition
             {
                 case "Small":
                     price = 0.20;
@@ -70,10 +68,10 @@ namespace Photo_Order
                     totalPrice = quantity * price;
                     break;
                 default:
-                    MessageBox.Show("Unknown size");
+                    MessageBox.Show("Unknown size");//Display other size other than above.
                     return; //Stop processing this event
             }
-            txtPrice.Text = price.ToString("c");//Format as currency
+            txtPrice.Text = totalPrice.ToString("c");//Display price in currency format
         }
 
         private void txtQuantity_TextChanged(object sender, EventArgs e)
